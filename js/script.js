@@ -1,7 +1,18 @@
+let currentPlayer = "X";
+let turns = 0;
+let gameEnd = false;
+
+function performLogic(buttonId, tileId){
+    $(buttonId).hide();
+    $(tileId).text(currentPlayer);
 
 
-
-
+    if (currentPlayer === "X") {
+        currentPlayer = "O";
+    } else {
+    currentPlayer = "X";
+    }
+}
 
 
 
@@ -39,5 +50,7 @@ $("#button8").click(function() {
 
 $("#button9").click(function() {
     performLogic("#button9","#tile9");
+
+
 });
 
