@@ -1,16 +1,30 @@
+
+
 let currentPlayer = "X";
 let turns = 0;
 let gameEnd = false;
 
 function performLogic(buttonId, tileId){
+    turns += 1;
+
     $(buttonId).hide();
     $(tileId).text(currentPlayer);
 
 
+    if(turns === 9){   
+        $("h1").text("It's a tie!");
+    }
+
+    $("#tile1").html();
+    $("#tile5").html();
+    $("#tile9").html();
+
+    if("#tile1" === currentPlayer && "#tile5" === currentPlayer && "#tile9" === currentPlayer);
+
     if (currentPlayer === "X") {
         currentPlayer = "O";
     } else {
-    currentPlayer = "X";
+        currentPlayer = "X";
     }
 }
 
@@ -50,7 +64,6 @@ $("#button8").click(function() {
 
 $("#button9").click(function() {
     performLogic("#button9","#tile9");
-
 
 });
 
